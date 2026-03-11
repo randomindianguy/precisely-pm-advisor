@@ -4,6 +4,8 @@
 
 Built by [Sidharth Sundaram](https://www.linkedin.com/in/sidharthsundaram/) as a prototype for Precisely's AI Product Manager Intern role (Summer 2026).
 
+[View Live](https://precisely-pm-advisor.vercel.app/)
+
 ---
 
 ## The Problem
@@ -80,63 +82,6 @@ This tool *is* a product feature Precisely could ship. It sits at the top of the
 **Initiative 2 — Automate a PM workflow via an agent:**
 The diagnostic logic demonstrates agent-building skills. The structured intake → AI synthesis → actionable output pipeline is the same pattern that powers internal PM workflow automation (competitive intel, customer conversation prep, segment analysis).
 
-## Setup & Deployment
-
-### Prerequisites
-
-- Node.js 18+
-- An [Anthropic API key](https://console.anthropic.com/)
-
-### Local Development
-
-```bash
-git clone https://github.com/YOUR_USERNAME/precisely-advisor.git
-cd precisely-advisor
-npm install
-```
-
-Create a `.env` file from the example:
-
-```bash
-cp .env.example .env
-# Edit .env and add your ANTHROPIC_API_KEY
-```
-
-Run with Vercel CLI (needed for the serverless API proxy):
-
-```bash
-npx vercel dev
-```
-
-This starts the frontend on `localhost:3000` with the `/api/claude` proxy function running locally.
-
-### Deploy to Vercel
-
-1. Push to GitHub
-2. Import the repo at [vercel.com/new](https://vercel.com/new)
-3. Add `ANTHROPIC_API_KEY` as an environment variable in Vercel's project settings
-4. Deploy
-
-That's it. Vercel auto-detects Vite, builds the frontend, and deploys the `/api/claude.js` serverless function as your API proxy.
-
-### Project Structure
-
-```
-precisely-advisor/
-├── api/
-│   └── claude.js          # Vercel serverless function (Anthropic API proxy)
-├── src/
-│   ├── App.jsx            # Full application (wizard + diagnosis + roadmap)
-│   └── main.jsx           # React entry point
-├── index.html
-├── vite.config.js
-├── vercel.json            # Vercel routing config
-├── package.json
-├── .env.example
-├── .gitignore
-└── README.md
-```
-
 ## What I'd Build Next (Internship Scope)
 
 - **Weeks 1–3:** Validate diagnostic logic with real Precisely customers and sales team
@@ -146,4 +91,4 @@ precisely-advisor/
 
 ---
 
-*Built with React, Claude API, and Recharts. Frameworks referenced: B=MAT (Fogg), ReCURS prioritization, and systems thinking — from Deepak Singh's Product Sense & Strategy course.*
+*Built with React, Claude API, and Recharts. Frameworks referenced: B=MAT (Fogg), ReCURS prioritization, and systems thinking*
